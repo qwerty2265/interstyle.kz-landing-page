@@ -655,3 +655,48 @@ header small {
     font-size: 1.2rem;
   }
 }
+
+/* Ватсап */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: all 0.3s;
+  animation: pulse 2s infinite;
+  padding: 0;
+  overflow: hidden;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.4);
+  animation: none;
+}
+
+.whatsapp-button svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  .whatsapp-button svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}

@@ -29,7 +29,7 @@ body {
 }
 
 header {
-  padding-top: 4rem;
+  padding-top: 7rem;
   margin-bottom: 2rem;
   width: 100%;
   background-color: transparent;
@@ -147,14 +147,33 @@ header small {
   z-index: 10;
 }
 
-#main-section p {
-  font-size: 2.5rem;
+.main-title-container {
+  font-size: 1.5rem;
   text-align: center;
-  color: var(--crayola-gray);
+  color: var(--ivory);
   z-index: 1;
-  margin: 0;
-  line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+.main-title-container > div > p {
+  line-height: 1.2;
+    margin: 0;
+}
+
+.main-title-container > div:nth-child(2)> p {
+  color: var(--crayola-gray);
+}
+
+.main-title-container > div > img {
+  display: none;
+}
+
+.main-title-tall-image-container {
+  display: none;
+}
+
+.secondary-title {
+  display: none;
 }
 
 #main-section span {
@@ -304,4 +323,212 @@ header small {
 
 .gallery-item:hover::after {
   opacity: 0;
+}
+
+@media (min-width: 380px) {
+  .main-title-container {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 767px) {
+  header {
+    box-sizing: border-box;
+    padding-inline: 2rem;
+    padding-top: 2rem;
+  }
+
+  header h1 {
+    line-height: 1.2;
+  }
+
+  header svg {
+    margin: 0;
+    margin-right: 1rem;
+  }
+
+  #header-content {
+    border-bottom: solid 1px var(--brown);
+  }
+
+  .header-logo-container {
+    display: flex;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .header-contact-info {
+    display: flex;
+    text-align: left;
+    width: 100%;
+  }
+  .header-contact-info div {
+    width: 50%;
+  }
+
+  #main-section {
+    height: 60vh;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-title-container {
+    font-size: 3.5rem;
+    text-align: left;
+    margin-left: 2rem;
+    line-height: 1.2;
+  }
+
+  .secondary-title {
+    display: block;
+    width: 25rem;
+    color: var(--crayola-gray);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #order-button {
+    align-self: end;
+    height: 11rem;
+    width: 11rem;
+    padding: 2rem;
+    margin-right: 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 789px) {
+  .main-title-container > div:nth-child(2)> p {
+    margin-left: 4rem;
+  }
+  .secondary-title {
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 991px) {
+  header {
+    padding-inline: 4rem;
+  }
+
+  #header-content {
+    border-bottom: solid 1px var(--crayola-gray);
+  }
+
+  #header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header-contact-info {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .header-contact-info div {
+    width: fit-content;
+    margin-left: 4rem;
+  }
+
+  #background-wrapper {
+    height: 50rem;
+    width: 40%; 
+    right: 0;
+    left: auto;
+  }
+
+  #background-wrapper img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #background-wrapper::after {
+    background: none;
+  }
+
+  #background-wrapper::before {
+    background: none;
+  }
+
+  #main-section {
+    height: 44rem;
+    width: 60%;
+    margin-bottom: 8rem;
+    flex-direction: column;
+  }
+
+  #main-section::before {
+    content: "";
+    position: absolute;
+    top: -40vw;
+    left: -40vw;
+    width: 80vw;
+    height: 80vw;
+    background: rgba(237,234,225,0.06); /* светлый полупрозрачный */
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .main-title-container {
+    margin-left: 0;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .main-title-container {
+    width: 100%;
+    font-size: 4rem;
+  }
+  .main-title-container > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .main-title-container > div:nth-child(2) {
+    position: relative;
+    align-self: center;
+    display: flex;
+  }
+  .main-title-container > div:nth-child(2) > p {
+    margin-left: 8.5rem;
+  }
+  .main-title-container > div:nth-child(1) > img {
+    margin-left: auto;
+    display: block;
+    width: 9rem;
+    height: 9rem;
+  }
+  .main-title-tall-image-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    width: 6rem;
+    height: 17rem;
+  }
+
+  .main-title-tall-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .secondary-title {
+    margin-left: 8.5rem;
+    font-size: 1.1rem;
+  }  
+
+  #order-button {
+    height: 13rem;
+    width: 13rem;
+    padding: 2.5rem;
+    margin-right: 6rem;
+    font-size: 1.8rem;
+  }
 }

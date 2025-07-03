@@ -12,24 +12,34 @@
   <body class="rubik">
     <header>
       <div id="header-content">
-        <svg width="50" height="50" class="header-logo" viewBox="0 0 250 366" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2.5" y="2.5" width="245" height="345" stroke="white" stroke-width="5"/>
-          <line x1="125.5" y1="5" x2="125.5" y2="350" stroke="white" stroke-width="5"/>
-          <line x1="140.5" y1="155" x2="140.5" y2="195" stroke="white" stroke-width="5"/>
-          <line x1="110.5" y1="155" x2="110.5" y2="195" stroke="white" stroke-width="5"/>
-          <rect x="17.5" y="348.5" width="215" height="15" stroke="white" stroke-width="5"/>
-        </svg>
+        <div class="header-logo-container">
+          <svg width="50" height="50" class="header-logo" viewBox="0 0 250 366" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.5" y="2.5" width="245" height="345" stroke="white" stroke-width="5"/>
+            <line x1="125.5" y1="5" x2="125.5" y2="350" stroke="white" stroke-width="5"/>
+            <line x1="140.5" y1="155" x2="140.5" y2="195" stroke="white" stroke-width="5"/>
+            <line x1="110.5" y1="155" x2="110.5" y2="195" stroke="white" stroke-width="5"/>
+            <rect x="17.5" y="348.5" width="215" height="15" stroke="white" stroke-width="5"/>
+          </svg>
 
-        <h1 class="el-messiri">InterStyle</h1>
-        <small id="company-description">Мебель на заказ</small>
+          <div class="header-text">
+            <h1 class="el-messiri">InterStyle</h1>
+            <small id="company-description">Мебель на заказ</small>
+          </div>
+        </div>
 
-        <small>Мы находимся:</small>
-        <p>г. Алматы, ул. Толе би 155</p>
+        <div class="header-contact-info">
+          <div>
+            <small>Мы находимся:</small>
+            <p>-</p>
+          </div>
 
-        <small class="el-messiri">Звоните нам:</small>
-        <p>
-          <a href="tel:+77752601115">+7 (775) 2601115</a>
-        </p>  
+          <div>
+            <small class="el-messiri">Звоните нам:</small>
+            <p>
+              <a href="tel:+77752601115">+7 (775) 2601115</a>
+            </p>  
+          </div>
+        </div>
       </div>    
     </header>
     <div id="background-wrapper">
@@ -37,12 +47,21 @@
     </div>
     <main>
       <section id="main-section">
-        <p class="el-messiri">
-          <span>
-            Мебель для вашего
-          </span><br>
-          уюта и комфорта
-        </p>
+        <div class="main-title-container">
+          <div>
+            <p class="el-messiri">Мебель для вашего</p>
+            <img src="/public/works/work11.webp" alt="Main Image">
+          </div>
+          <div>
+            <div class="main-title-tall-image-container">
+              <img src="/public/works/work7.webp" alt="Secondary Image">
+            </div>
+            <p class="el-messiri">уюта и комфорта</p>
+          </div>
+          <p class="secondary-title">
+            Мы - команда профессионалов, преданная искусству создания уникальной мебели, которая станет неотъемлемой частью вашего пространства.
+          </p>
+        </div>  
         <button id="order-button" class="el-messiri">
           Оставить заявку
         </button>

@@ -189,12 +189,41 @@ header small {
   border: solid 1px var(--crayola-gray);
   background-color: transparent;
   color: var(--ivory);
-  font-size: 1.4rem; 
+  font-size: 1.4rem;
+  z-index: 500;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.order-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, var(--crayola-gray) 0%, var(--crayola-gray) 50%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.order-button:hover::after {
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.order-button > div {
+  position: relative;
+  z-index: 2;
 }
 
 .order-button:hover {
-  background-color: var(--crayola-gray);
-  color: var(--brown);
   cursor: pointer;
 }
 

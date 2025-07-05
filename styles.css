@@ -435,7 +435,7 @@ header small {
   }
 
   #background-wrapper {
-    height: 50rem;
+    height: 100dvh;
     width: 40%; 
     right: 0;
     left: auto;

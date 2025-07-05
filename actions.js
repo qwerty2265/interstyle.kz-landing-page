@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const orderButton = document.getElementById('order-button');
-  const modalOverlay = document.getElementById('modal-overlay');
-  const modalClose = document.getElementById('modal-close');
-  const orderForm = document.getElementById('order-form');
-  const formSuccess = document.getElementById('form-success');
+  const modalOverlay = document.getElementsByClassName('modal-overlay');
+  const modalClose = document.getElementsByClassName('modal-close');
+  const orderForm = document.getElementsByClassName('order-form');
+  const formSuccess = document.getElementsByClassName('form-success');
   
   if (orderButton) {
     orderButton.addEventListener('click', function() {

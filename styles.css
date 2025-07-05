@@ -497,7 +497,7 @@ header small {
     display: flex;
   }
   .main-title-container > div:nth-child(2) > p {
-    margin-left: 13.5vw;
+    margin-left: 15.5vw;
   }
   .main-title-container > div:nth-child(1) > img {
     margin-left: auto;
@@ -509,8 +509,8 @@ header small {
     display: block;
     position: absolute;
     top: 0;
-    left: 1.5rem;
-    width: 10vw;
+    left: 3.5vw;
+    width: 9.5vw;
     height: 16rem;
   }
 
@@ -522,8 +522,8 @@ header small {
 
   .secondary-title {
     display: block;
-    max-width: 19vw;
-    margin-left: 13.5vw;
+    max-width: 20vw;
+    margin-left: 15.5vw;
     font-size: 1.125rem;
     box-sizing: border-box;
     line-height: 1.7;

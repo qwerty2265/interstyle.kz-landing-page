@@ -366,7 +366,7 @@ header small {
   }
 
   .main-section {
-    height: 60vh;
+    height: 45vh;
     display: flex;
     align-items: start;
     flex-direction: row;
@@ -392,9 +392,8 @@ header small {
 
   .order-button {
     align-self: end;
-    height: 11rem;
-    width: 11rem;
-    padding: 2rem;
+    height: 12.5rem;
+    width: 12.5rem;
     margin-right: 4rem;
     font-size: 1.5rem;
   }
@@ -455,20 +454,22 @@ header small {
   }
 
   .main-section {
+    position: relative;
     height: 44rem;
     width: 60%;
     margin-bottom: 8rem;
     flex-direction: column;
   }
 
-  .main-section::before {
+  main::before {
     content: "";
     position: absolute;
-    top: -40vw;
-    left: -40vw;
-    width: 80vw;
-    height: 80vw;
-    background: rgba(237,234,225,0.06);
+    top: -30rem;
+    left: -30rem;
+    width: 75%;
+    height: 70rem;
+    border: 1px solid rgba(155, 147, 145, 0.2);
+    background: transparent;
     border-radius: 50%;
     z-index: 0;
     pointer-events: none;
@@ -476,14 +477,14 @@ header small {
 
   .main-title-container {
     margin-left: 0;
-    padding-left: 4rem;
+    padding-left: 3.5rem;
     padding-right: 2rem;
     box-sizing: border-box;
     width: 100%;
   }
   .main-title-container {
     width: 100%;
-    font-size: 4rem;
+    font-size: 5vw;
   }
   .main-title-container > div:nth-child(1) {
     display: flex;
@@ -496,21 +497,21 @@ header small {
     display: flex;
   }
   .main-title-container > div:nth-child(2) > p {
-    margin-left: 8.5rem;
+    margin-left: 13.5vw;
   }
   .main-title-container > div:nth-child(1) > img {
     margin-left: auto;
     display: block;
-    width: 9rem;
-    height: 9rem;
+    width: 8rem;
+    height: 8rem;
   }
   .main-title-tall-image-container {
     display: block;
     position: absolute;
     top: 0;
     left: 1.5rem;
-    width: 6rem;
-    height: 17rem;
+    width: 10vw;
+    height: 16rem;
   }
 
   .main-title-tall-image-container img {
@@ -520,16 +521,29 @@ header small {
   }
 
   .secondary-title {
-    margin-left: 8.5rem;
-    font-size: 1.1rem;
+    display: block;
+    max-width: 19vw;
+    margin-left: 13.5vw;
+    font-size: 1.125rem;
+    box-sizing: border-box;
+    line-height: 1.7;
+    overflow-wrap: break-word; 
   }  
 
   .order-button {
-    height: 13rem;
-    width: 13rem;
-    padding: 2.5rem;
-    margin-right: 6rem;
-    font-size: 1.8rem;
+    position: absolute;
+    bottom: 10rem;
+    right: 0rem;
+    height: 14vw;
+    width: 14vw;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    padding: 0rem;
+  }
+
+  .order-button > div {
+    padding: 1rem;
+    text-align: center;
   }
 }
 

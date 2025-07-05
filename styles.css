@@ -76,18 +76,18 @@ header small {
   color: var(--crayola-gray);
 }
 
-#company-description {
+.company-description {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 2rem;
 }
 
-#header-content {
+.header-content {
   display: flex;
   flex-direction: column;
 }
 
-#background-wrapper {
+.background-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,14 +99,14 @@ header small {
   pointer-events: none;
 }
 
-#background-wrapper img {
+.background-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-#background-wrapper::after {
+.background-wrapper::after {
   content: "";
   position: absolute;
   top: 0; 
@@ -126,7 +126,7 @@ header small {
 }
 
 
-#background-wrapper::before {
+.background-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -138,7 +138,7 @@ header small {
   pointer-events: none;
 }
 
-#main-section {
+.main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,12 +176,12 @@ header small {
   display: none;
 }
 
-#main-section span {
+.main-section span {
   color: var(--ivory);
   margin: 0;
 }
 
-#order-button {
+.order-button {
   height: 11rem;
   width: 11rem;
   padding: 2rem;
@@ -192,30 +192,30 @@ header small {
   font-size: 1.4rem; 
 }
 
-#order-button:hover {
+.order-button:hover {
   background-color: var(--crayola-gray);
   color: var(--brown);
   cursor: pointer;
 }
 
-#about-us h2 > span {
+.about-us h2 > span {
   color: var(--crayola-gray);
 }
 
-#about-us hr {
+.about-us hr {
   border: none;
   height: 0.1rem;
   background-color: var(--ivory);
   margin: 1rem 0;
 }
 
-#about-us p, ul > li {
+.about-us p, ul > li {
   color: var(--crayola-gray);
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-#about-us ul > li {
+.about-us ul > li {
   margin-bottom: 0.5rem;
 }
 
@@ -230,12 +230,12 @@ header small {
 
 /* Стили для секции Наши работы */
 
-#our-works {
+.our-works {
   padding-bottom: 3rem;
   margin-top: 3rem;
 }
 
-#our-works h2 {
+.our-works h2 {
   margin-bottom: 2rem;
 }
 
@@ -347,7 +347,7 @@ header small {
     margin-right: 1rem;
   }
 
-  #header-content {
+  .header-content {
     border-bottom: solid 1px var(--brown);
   }
 
@@ -365,7 +365,7 @@ header small {
     width: 50%;
   }
 
-  #main-section {
+  .main-section {
     height: 60vh;
     display: flex;
     align-items: start;
@@ -390,7 +390,7 @@ header small {
     margin-bottom: 1rem;
   }
 
-  #order-button {
+  .order-button {
     align-self: end;
     height: 11rem;
     width: 11rem;
@@ -414,11 +414,11 @@ header small {
     padding-inline: 4rem;
   }
 
-  #header-content {
+  .header-content {
     border-bottom: solid 1px var(--crayola-gray);
   }
 
-  #header-content {
+  .header-content {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -434,34 +434,34 @@ header small {
     margin-left: 4rem;
   }
 
-  #background-wrapper {
+  .background-wrapper {
     height: 100dvh;
     width: 40%; 
     right: 0;
     left: auto;
   }
 
-  #background-wrapper img {
+  .background-wrapper img {
     height: 100%;
     width: 100%;
   }
 
-  #background-wrapper::after {
+  .background-wrapper::after {
     background: none;
   }
 
-  #background-wrapper::before {
+  .background-wrapper::before {
     background: none;
   }
 
-  #main-section {
+  .main-section {
     height: 44rem;
     width: 60%;
     margin-bottom: 8rem;
     flex-direction: column;
   }
 
-  #main-section::before {
+  .main-section::before {
     content: "";
     position: absolute;
     top: -40vw;
@@ -524,7 +524,7 @@ header small {
     font-size: 1.1rem;
   }  
 
-  #order-button {
+  .order-button {
     height: 13rem;
     width: 13rem;
     padding: 2.5rem;

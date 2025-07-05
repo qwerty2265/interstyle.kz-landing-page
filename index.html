@@ -139,12 +139,12 @@
       </section>
     </main>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" id="modal-overlay">
       <div class="modal-content">
-        <button class="modal-close">&times;</button>
+        <button class="modal-close" id="modal-close">&times;</button>
         <h2 class="el-messiri">Оставить заявку</h2>
         <p class="modal-subtitle">Оставьте заявку и наши менеджеры свяжутся с вами<br>в течение 10 минут</p>
-        <form class="order-form" action="sendmail.php" method="post">
+        <form class="order-form" id="order-form" action="sendmail.php" method="post">
           <div class="form-group">
             <label for="name">Ваше имя:</label>
             <input type="text" id="name" name="name" required>
@@ -159,7 +159,7 @@
           </div>
           <button type="submit" class="submit-button el-messiri">Отправить</button>
         </form>
-        <div class="form-success" style="display:none;">
+        <div class="form-success" id="form-success" style="display:none;">
           <p>Спасибо! Ваша заявка отправлена.</p>
         </div>
       </div>

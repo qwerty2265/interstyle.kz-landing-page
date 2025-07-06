@@ -443,7 +443,8 @@ header small {
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 4vw !important; 
+    margin: 0;
   }
 
   .header-content {
@@ -484,6 +485,10 @@ header small {
 
   .background-wrapper::before {
     background: none;
+  }
+
+  .container {
+    margin-inline: 4rem ;
   }
 
   .main-section {
@@ -783,27 +788,45 @@ header small {
 
 // Отзывы
 
+/* Отзывы - исправленные стили */
 .reviews {
   width: 100%;
   color: var(--crayola-gray);
-  margin-bottom: 3rem;
+  padding: 1rem 0;
+}
+
+.reviews-header-icons {
+  display: none;
 }
 
 .reviews-container {
   position: relative;
   overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.reviews ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-bottom: 1.5rem;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .reviews li {
+  flex: 0 0 100%;
   width: 100%;
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  margin-right: 1.5rem; 
+  margin-right: 1.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .review {
-  width: 100%;
-  position: relative;
+  padding: 1rem 0;
 }
 
 .review-content p {
@@ -824,17 +847,6 @@ header small {
   font-size: 0.9rem;
 }
 
-.reviews ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  margin-bottom: 3rem;
-}
-
 .author {
   font-size: 1.5rem;
   color: var(--ivory);
@@ -852,7 +864,6 @@ header small {
   height: 100%;
   object-fit: cover;
 }
-
 .reviews-indicators {
   display: flex;
 }
@@ -863,9 +874,108 @@ header small {
   background-color: var(--crayola-gray);
   opacity: 0.3;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .indicator.active {
   opacity: 1;
+}
+
+/* Стиль для клонированных слайдов, чтобы они выглядели так же, как оригиналы */
+.cloned-slide {
+  flex: 0 0 100%; /* будет переопределено через JavaScript */
+  width: 100%; /* будет переопределено через JavaScript */
+  margin-right: 1.5rem;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+
+
+@media (min-width: 480px) {
+  .review {
+    display: flex;
+  }
+
+  .review-author-image {
+    margin-bottom: 0;
+    align-self: start;
+    height: 12.5rem;
+    width: 50rem;
+    margin-right: 1.5rem;
+    pointer-events: none;
+  }
+
+  .review-content p:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .review-content p:nth-child(2) {
+    font-size: 1.1rem;
+  }
+
+  .review-content p:nth-child(3) {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .reviews-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .reviews-header-icons {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .reviews-header-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .reviews-header-icons svg {
+    width: 2.5rem;
+    height: 1.25rem; 
+    fill: var(--crayola-gray);
+  }
+
+  .reviews-header-icons svg:hover {
+    fill: var(--ivory);
+    transition: fill 0.3s ease;
+  }
+
+  .reviews-container {
+    overflow: hidden;
+
+  }
+
+  .reviews li, .cloned-slide {
+    margin-right: 0;
+
+  }
+
+  .review-author-image {
+    align-self: end;
+    margin-right: 2rem;
+  }
+
+  .review-content p:nth-child(1) {
+    font-size: 1.1rem;
+  }
+
+  .review-content p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  .review-content p:nth-child(3) {
+    font-size: 1.1rem;
+  }
+
+  .reviews-indicators {
+    display: none;
+  }
 }

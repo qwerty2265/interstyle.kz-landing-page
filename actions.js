@@ -72,4 +72,84 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.error('Форма не найдена на странице');
   }
+
+    const reviewsList = document.getElementById('reviews-list');
+  const reviewsIndicators = document.getElementById('reviews-indicators');
+  
+  if (reviewsList && reviewsIndicators) {
+    const slides = reviewsList.querySelectorAll('li');
+    let currentSlide = 0;
+    let autoPlayInterval;
+    
+    slides.forEach((_, index) => {
+      const indicator = document.createElement('div');
+      indicator.classList.add('indicator');
+      if (index === 0) indicator.classList.add('active');
+      indicator.addEventListener('click', () => goToSlide(index));
+      reviewsIndicators.appendChild(indicator);
+    });
+    
+    function updateIndicators() {
+      const indicators = reviewsIndicators.querySelectorAll('.indicator');
+      indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+    }
+    
+    function goToSlide(index) {
+      if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else if (index >= slides.length) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+      
+      const offset = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+      reviewsList.scrollTo({
+        left: currentSlide * offset,
+        behavior: 'smooth'
+      });
+      
+      updateIndicators();
+    }
+    
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+    
+    function startAutoScroll() {
+      autoPlayInterval = setInterval(nextSlide, 3000);
+    }
+    
+    reviewsList.addEventListener('mousedown', () => {
+      clearInterval(autoPlayInterval);
+    });
+    
+    reviewsList.addEventListener('touchstart', () => {
+      clearInterval(autoPlayInterval);
+    });
+    
+    reviewsList.addEventListener('mouseup', () => {
+      startAutoScroll();
+    });
+    
+    reviewsList.addEventListener('touchend', () => {
+      startAutoScroll();
+    });
+    
+    startAutoScroll();
+  }
+  
+  if (orderButton) {
+    orderButton.addEventListener('click', function() {
+      modalOverlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  
 });

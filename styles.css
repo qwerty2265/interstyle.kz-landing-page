@@ -148,16 +148,17 @@ header small {
 }
 
 .main-title-container {
-  font-size: 1.5rem;
+
   text-align: center;
   color: var(--ivory);
   z-index: 1;
   margin-bottom: 1rem;
 }
 
-.main-title-container > div > p {
+.main-title-container div > p {
   line-height: 1.2;
-    margin: 0;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .main-title-container > div:nth-child(2)> p {
@@ -250,13 +251,8 @@ header small {
 
 .container {
   margin-inline: 1rem;
+  margin-bottom: 4rem;
 }
-
-.container h2 {
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
 /* Стили для секции Наши работы */
 
 .our-works {
@@ -360,7 +356,22 @@ header small {
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 480px) {
+  h2 { 
+    font-size: 2.1rem; 
+    line-height: 2.8rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  h2 { 
+    font-size: 3rem; 
+    line-height: 3.2rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
   header {
     box-sizing: border-box;
     padding-inline: 2rem;
@@ -403,10 +414,13 @@ header small {
   }
 
   .main-title-container {
-    font-size: 3.5rem;
     text-align: left;
     margin-left: 2rem;
-    line-height: 1.2;
+  }
+
+  .main-title-container div > p {
+    font-size: 3.75rem;
+    line-height: 4.3rem;
   }
 
   .secondary-title {
@@ -437,13 +451,14 @@ header small {
   }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   header {
     padding-inline: 4rem;
   }
 
   h2 {
-    font-size: 4vw !important; 
+    font-size: 4vw; 
+    line-height: 5vw;
     margin: 0;
   }
 
@@ -487,8 +502,13 @@ header small {
     background: none;
   }
 
+  .main-title-container div > p {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+
   .container {
-    margin-inline: 4rem ;
+    margin-inline: 2.5rem ;
   }
 
   .main-section {
@@ -583,6 +603,10 @@ header small {
     padding: 1rem;
     text-align: center;
   }
+}
+
+.about-company-image-small, .about-company-image-big {
+  display: none;
 }
 
 /* Модальное окно */
@@ -788,7 +812,6 @@ header small {
 
 // Отзывы
 
-/* Отзывы - исправленные стили */
 .reviews {
   width: 100%;
   color: var(--crayola-gray);
@@ -977,5 +1000,126 @@ header small {
 
   .reviews-indicators {
     display: none;
+  }
+}
+
+/* О компании */
+
+.about-company {
+  color: var(--crayola-gray);
+}
+
+.about-company h2 {
+  display: flex;
+  flex-direction: column;
+  color: var(--ivory);
+  margin-bottom: 1.5rem;
+}
+
+.about-company h2 > span:nth-child(2) {
+  color: var(--crayola-gray);
+}
+
+.about-company p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-company-header {
+  margin-bottom: 1.25rem;
+}
+
+.about-company-stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-company-stats div {
+  height: auto;
+  width: 50%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+.about-company-stats div > p:nth-child(1) {
+  font-size: 2.3rem;
+  line-height: 2.25rem;
+  margin-bottom: 0.3rem;
+}
+
+.about-company-stats div:nth-child(odd) > p:nth-child(1) {
+  color: var(--ivory);
+}
+
+@media (min-width: 768px) {
+  .about-company-stats {
+    flex-wrap: nowrap;
+  }
+
+  .about-company-stats div > p:nth-child(1) {
+    font-size: 3rem;
+    line-height: 2.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-company { 
+    position: relative;
+    width: 100%;
+  }
+
+  .about-company h2 > span:nth-child(2) {
+    padding-left: 30%;
+  }
+
+  .about-company-header {
+    margin-bottom: 1rem;
+  }
+
+  .about-company-header > p {
+    margin-left: 15%;
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+
+  .about-company-stats {
+    width: 55%;
+  }
+
+  .about-company-stats div > p:nth-child(1) {
+    font-size: 4vw;
+    line-height: 5vw;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-company-stats div > p:nth-child(2) {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  .about-company-image-small {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 13vw;
+    height: 13vw;
+    display: block;
+  }
+
+  .about-company-image-big {
+    position: absolute;
+    top: 10rem;
+    right: 5rem;
+    width: 35%;
+    height: 70%;
+    display: block;
+  }
+
+  .about-company-image-small img, .about-company-image-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

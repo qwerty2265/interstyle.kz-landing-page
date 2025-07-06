@@ -241,8 +241,6 @@ header small {
 
 .about-us p, ul > li {
   color: var(--crayola-gray);
-  font-size: 1.1rem;
-  line-height: 1.5;
 }
 
 .about-us ul > li {
@@ -369,8 +367,9 @@ header small {
     font-size: 3rem; 
     line-height: 3.2rem;
   }
-  p {
+  p, li {
     font-size: 1.125rem;
+    line-height: 1.8rem;
   }
   header {
     box-sizing: border-box;

@@ -393,6 +393,14 @@ document.addEventListener('DOMContentLoaded', function() {
         prevSlide();
       });
     }
+
+    const toTopBtn = document.getElementById('get-to-beggining-button');
+    if (toTopBtn) {
+      toTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     
     // Инициализация и запуск карусели
     setupInfiniteScroll();

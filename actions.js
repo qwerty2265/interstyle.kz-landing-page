@@ -222,6 +222,17 @@ document.addEventListener('DOMContentLoaded', function() {
       reviewsList.style.transition = 'transform 0.5s ease-out';
     }
     
+    // Функция для принудительной разблокировки карусели
+    function forceUnblockCarousel() {
+      isDragBlocked = false;
+      isAnimating = false;
+      startAutoScroll();
+      console.log('Carousel forcibly unblocked');
+    }
+    
+    // Вызываем через 3 секунды после загрузки страницы
+    setTimeout(forceUnblockCarousel, 3000);
+    
     // Обработчик окончания перехода для бесконечной карусели
     reviewsList.addEventListener('transitionend', function(e) {
       if (e.propertyName !== 'transform' || !isAnimating) return;
@@ -375,7 +386,25 @@ document.addEventListener('DOMContentLoaded', function() {
       clearTimeout(window.resizeTimer);
       window.resizeTimer = setTimeout(() => {
         isDragBlocked = false;
+        
+        // Перезапускаем автопрокрутку когда разблокируем
+        startAutoScroll();
+        
+        // Принудительный reflow
+        void reviewsList.offsetWidth;
+        
+        // Восстанавливаем анимацию
+        reviewsList.style.transition = 'transform 0.5s ease-out';
       }, 250);
+      
+      // Аварийный сброс блокировки через 2 секунды
+      setTimeout(() => {
+        if (isDragBlocked) {
+          console.log('Emergency unblock of carousel');
+          isDragBlocked = false;
+          startAutoScroll();
+        }
+      }, 2000);
     });
 
     const rightButton = document.getElementById('reviews-right-button');

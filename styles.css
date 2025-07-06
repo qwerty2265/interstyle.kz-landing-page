@@ -277,7 +277,7 @@ header small {
 
 .container {
   margin-inline: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 /* Стили для секции Наши работы */
 
@@ -286,15 +286,10 @@ header small {
   margin-top: 3rem;
 }
 
-.our-works h2 {
-  margin-bottom: 2rem;
-}
 
 .works-description {
   color: var(--crayola-gray);
-  font-size: 1.1rem;
   margin-bottom: 2rem;
-  line-height: 1.5;
 }
 
 .works-gallery {

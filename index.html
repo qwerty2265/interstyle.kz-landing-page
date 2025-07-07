@@ -3,8 +3,12 @@
   <head>
     <title>Interstyle</title>
     <meta charset="UTF-8">
+    <meta name="description" content="Интернет-магазин мебели на заказ">
+    <meta name="keywords" content="мебель, заказ, диваны, кухни, шкафы, офисная мебель">
+    <meta name="author" content="InterStyle">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./public/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -65,6 +69,99 @@
           </div>
         </button>
       </section>
+
+      <section class="products container">
+        <ul class="product-list" id="product-list">
+          <li>
+            <article class="product-item">
+              <div class="product-image">
+                <img src="./public/products/sofa.webp" alt="Кресло">
+              </div>
+              <div class="product-details">
+                <a class="el-messiri product-name" href="/product1">Диван "Модерн"</a>
+                <p class="product-price">от <span>45 000</span> руб.</p>
+                <p class="product-description">
+                  Стильный диван с лаконичным дизайном, идеально подойдет для гостиной в современном стиле. Обивка из прочного текстиля, наполнитель — пенополиуретан для комфорта.
+                </p>
+                <button class="product-buy-button" id="product-buy-button">
+                  <span class="el-messiri">Купить</span>
+                </button>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product-item">
+              <div class="product-image">
+                <img src="./public/products/kitchenset.webp" alt="Кресло">
+              </div>
+              <div class="product-details">
+                <a class="el-messiri product-name" href="/product2">Кухонный гарнитур "Лофт"</a>
+                <p class="product-price">от <span>85 000</span> руб.</p>
+                <p class="product-description">
+                  Функциональный гарнитур для кухни с элементами в стиле лофт. Выполнен из качественных МДФ-панелей, устойчивых к влаге и температурным перепадам.
+                </p>
+                <button class="product-buy-button" id="product-buy-button">
+                  <span class="el-messiri">Купить</span>
+                </button>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product-item">
+              <div class="product-image">
+                <img src="./public/products/armchair.webp" alt="Кресло">
+              </div>
+              <div class="product-details">
+                <a class="el-messiri product-name"  href="/product3">Кресло "Комфорт"</a>
+                <p class="product-price">от <span>25 000</span> руб.</p>
+                <p class="product-description">
+                  Эргономичное офисное кресло с регулируемой спинкой и подлокотниками. Изготовлено из дышащей ткани и обладает отличной поддержкой для спины.
+                </p>
+                <button class="product-buy-button" id="product-buy-button">
+                  <span class="el-messiri">Купить</span>
+                </button>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product-item">
+              <div class="product-image">
+                <img src="./public/products/closet.webp" alt="Кресло">
+              </div>
+              <div class="product-details">
+                <a class="el-messiri product-name" href="/product4">Шкаф-купе "Элегант"</a>
+                <p class="product-price">от <span>65 000</span> руб.</p>
+                <p class="product-description" href="/product4">
+                  Просторный шкаф-купе с зеркальными дверями и множеством полок для удобного хранения вещей. Выполнен в современном стиле и подойдет для любой спальни или прихожей.
+                </p>
+                <button class="product-buy-button" id="product-buy-button">
+                  <span class="el-messiri">Купить</span>
+                </button>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="product-indicators" id="product-indicators"></div>
+        <div class="product-navigation-buttons">
+          <button id="product-left-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.22 47.72" width="69.22" height="47.72" data-prefix="i34kcluwx">
+              <g>
+                <path d="M1.66 21.88h67.56v3.95H1.66z" class="path-islu0jgue"></path>
+                <path d="M25.83.3C25 11.07 18.22 20 8.71 23.86 18.22 27.72 25 36.65 25.83 47.42l-3.94.3C20.98 35.94 11.78 26.74 0 25.83v-3.94C11.78 20.98 20.98 11.78 21.89 0l3.94.3z" class="path-i2wn3rgck"></path>
+              </g>
+            </svg>
+          </button>
+          <button id="product-right-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.22 47.72" width="69.22" height="47.72" data-prefix="ikbbu8cz9">
+              <g>
+                <path d="M0 21.88h67.56v3.95H0z" class="path-ipqsl5w40"></path>
+                <path d="M43.39.3C44.22 11.07 51 20 60.51 23.86 51 27.72 44.22 36.65 43.39 47.42l3.94.3c.91-11.78 10.11-20.98 21.89-21.89v-3.94C57.44 20.98 48.24 11.78 47.33 0l-3.94.3z" class="path-ino198exa"></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </section>
+
       <section class="container about-us">
         <h2 class="el-messiri">Мебель, созданная специально для <span>вашего пространства</span></h2>
         <p>

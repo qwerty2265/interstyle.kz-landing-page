@@ -171,7 +171,7 @@ header small {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   z-index: 10;
 }
 
@@ -276,7 +276,7 @@ header small {
 }
 
 .container {
-  margin-inline: 1rem;
+  margin-inline: 1.3rem;
   margin-bottom: 5rem;
 }
 /* Стили для секции Наши работы */
@@ -433,6 +433,7 @@ header small {
     align-items: start;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 8rem;
   }
 
   .main-title-container {
@@ -559,7 +560,7 @@ header small {
     position: relative;
     height: 44rem;
     width: 60%;
-    margin-bottom: 8rem;
+    margin-bottom: 7rem;
     flex-direction: column;
   }
 
@@ -985,6 +986,16 @@ header small {
   }
 }
 
+@media (min-width: 768px) {
+  .reviews-indicators {
+    justify-content: end;
+  }
+
+  .reviews-indicators .indicator {
+    width: 6rem;
+  }
+}
+
 @media (min-width: 992px) {
   .reviews-header{
     width: 100%;
@@ -1239,5 +1250,188 @@ header small {
   .advantages-list {
     width: 50%;
   }
+}
 
+/* Продукты */
+
+.products {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.product-navigation-buttons {
+  display: none;
+}
+
+.product-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  user-select: none;
+  width: 100%;
+  -webkit-user-select: none; 
+}
+
+.product-list li {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-list li > article {
+  position: relative;
+}
+
+.product-image {
+  height: 9.375rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+
+.product-name {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: var(--ivory);
+  margin: 0;
+  cursor: pointer;
+}
+
+.product-name::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+
+.product-price span {
+  color: var(--ivory);
+}
+
+.product-buy-button {
+  all: unset;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.product-buy-button::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: var(--crayola-gray);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.product-buy-button:hover::after {
+  transform: scaleX(0);
+}
+
+.product-buy-button span {
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+}
+
+.product-indicators {
+  display: flex;
+}
+
+.product-indicators .indicator {
+  margin: 0;
+}
+
+
+.cloned-slide {
+  flex: 0 0 100%; /* Будет переопределено через JavaScript */
+  width: 100%; /* Будет переопределено через JavaScript */
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 480px) {
+  .product-image {
+    height: 15.625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-indicators {
+    justify-content: flex-end;
+  }
+
+  .product-indicators .indicator {
+    width: 6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-list {
+    margin-bottom: 2rem;
+  }
+
+  .product-list li {
+    padding-right: 1.5rem;
+  }
+  
+  .product-image {
+    height: 21.875rem;
+  }
+
+  .product-indicators {
+    display: none;
+  }
+
+  .product-navigation-buttons {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .product-navigation-buttons button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  .product-navigation-buttons svg {
+    width: 2.5rem;
+    height: 1.5rem; 
+    fill: var(--crayola-gray);
+  }
+
+  .product-navigation-buttons svg:hover {
+    fill: var(--ivory);
+    transition: fill 0.3s ease;
+  }
+
+  .product-buy-button span {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
 }

@@ -33,7 +33,11 @@ composer install
 
 ```
 GMAIL_APP_PASSWORD="ваш_пароль_приложения"
+GMAIL_APP_USERNAME="ваш_аккаунт_приложения"
+GMAIL_TO_EMAIL="ваша_почта_для_получения_писем" 
 ```
+
+Подробнее про пароль и аккаунт приложения можете узнать [тут](https://support.google.com/accounts/answer/185833?hl=ru)
 
 ### 3. Запуск локального сервера
 

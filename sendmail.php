@@ -20,10 +20,12 @@ file_put_contents($log_file, $log_message, FILE_APPEND);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+$to_email = $_ENV['GMAIL_TO_EMAIL'] ?? '';
+$app_username = $_ENV['GMAIL_APP_USERNAME'] ?? '';
 $app_password = $_ENV['GMAIL_APP_PASSWORD'] ?? '';
 
 try {
-    $to = 'maksimmun007@gmail.com';
+    $to = $to_email;
     $subject = 'Новая заявка с сайта InterStyle';
     $message = "Имя: $name\nТелефон: $phone\nДата: " . date('Y-m-d H:i:s');
 
@@ -31,7 +33,7 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'maksimmun007@gmail.com';
+    $mail->Username = $app_username;
     $mail->Password = $app_password;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;

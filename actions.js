@@ -47,12 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
       event.preventDefault();
       
       const formData = new FormData(orderForm);
-      const name = formData.get('name');
-      const phone = formData.get('phone');
-      const callTime = formData.get('call-time');
       
-      orderForm.style.display = 'none';
-      formSuccess.style.display = 'block';
+      fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          orderForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          alert('Ошибка: ' + data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Ошибка отправки формы:', error);
+        alert('Произошла ошибка при отправке формы');
+      });
     });
   }
 

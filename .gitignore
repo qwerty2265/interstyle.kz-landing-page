@@ -1,2 +1,4 @@
 .DS_Store
 logs
+vendor
+node_modules

@@ -46,6 +46,7 @@ footer {
 
 footer ul {
   margin-bottom: 2rem;
+  padding: 0;
   list-style: none;
 }
 
@@ -840,13 +841,7 @@ header small {
   }
 }
 
-// Отзывы
-
-.reviews {
-  width: 100%;
-  color: var(--crayola-gray);
-  padding: 1rem 0;
-}
+/* Отзывы */
 
 .reviews-header-icons {
   display: none;

@@ -753,6 +753,12 @@ header small {
   color: var(--brown);
 }
 
+.submit-button.loading {
+  pointer-events: none;
+  color: var(--crayola-gray);
+  border-color: var(--crayola-gray);
+}
+
 .form-success {
   text-align: center;
   color: var(--ivory);

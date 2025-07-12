@@ -45,7 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if (orderForm) {
     orderForm.addEventListener('submit', function(event) {
       event.preventDefault();
-      
+
+      const submitButton = orderForm.querySelector('.submit-button');
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.classList.add('loading');
+      }
+
       const formData = new FormData(orderForm);
       
       fetch('sendmail.php', {
@@ -64,6 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(error => {
         console.error('Ошибка отправки формы:', error);
         alert('Произошла ошибка при отправке формы');
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.classList.remove('loading');
+        }
       });
     });
   }

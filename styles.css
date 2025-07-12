@@ -105,10 +105,13 @@ header small {
   color: var(--crayola-gray);
 }
 
+.header-text {
+  margin-bottom: 2rem;
+}
+
 .company-description {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 2rem;
 }
 
 .header-content {
@@ -418,6 +421,10 @@ header small {
 
   .header-content {
     border-bottom: solid 1px var(--brown);
+  }
+
+  .header-text {
+    margin-bottom: 0;
   }
 
   .header-logo-container {

@@ -4,6 +4,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+date_default_timezone_set('Asia/Almaty');
+
 header('Content-Type: application/json; charset=utf-8');
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
